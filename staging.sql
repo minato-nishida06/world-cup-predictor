@@ -1,0 +1,22 @@
+CREATE TABLE matches_staging (
+    year INT,
+    datetime VARCHAR(50),
+    stage VARCHAR(50),
+    stadium VARCHAR(100),
+    city VARCHAR(100),
+    home_team_name VARCHAR(50),
+    home_team_goals INT,
+    away_team_goals INT,
+    away_team_name VARCHAR(50),
+    win_conditions VARCHAR(100),
+    attendance NUMERIC,
+    half_time_home_goals INT,
+    half_time_away_goals INT,
+    referee VARCHAR(100),
+    assistant1 VARCHAR(100),
+    assistant2 VARCHAR(100),
+    round_id INT,
+    match_id INT,
+    home_team_initials VARCHAR(10),
+    away_team_initials VARCHAR(10)
+);
