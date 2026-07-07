@@ -1,6 +1,6 @@
 import psycopg2 
-team_name_1 = input("Enter the first team name: ")  
-team_name_2 = input("Enter the second team name: ")
+team_name_1 = input("Enter the first team name: ").title()  
+team_name_2 = input("Enter the second team name: ").title()
 conn = psycopg2.connect(host="db", port=5432, dbname="world_cup", user="postgres", password="postgres")
 cur = conn.cursor()
 cur.execute("SELECT * FROM matches WHERE (home_team_name = %s AND away_team_name = %s) OR (home_team_name = %s AND away_team_name = %s)", (team_name_1, team_name_2, team_name_1, team_name_2)) 
