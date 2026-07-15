@@ -5,9 +5,10 @@ services:
     volumes:
       - ..:/workspace:cached
     command: sleep infinity
+    ports:
+      - "5000:5000"
     depends_on:
       - db
-
   db:
     image: postgres:16
     restart: unless-stopped
@@ -17,6 +18,5 @@ services:
       POSTGRES_DB: world_cup
     volumes:
       - postgres-data:/var/lib/postgresql/data
-
 volumes:
   postgres-data:

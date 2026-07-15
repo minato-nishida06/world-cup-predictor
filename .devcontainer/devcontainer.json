@@ -12,5 +12,5 @@
       ]
     }
   },
-  "postCreateCommand": "pip install psycopg2-binary pandas"
+  "postCreateCommand": "pip install psycopg2-binary pandas flask"
 }

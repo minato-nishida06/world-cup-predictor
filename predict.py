@@ -43,7 +43,7 @@ else:
     loss_percentage = losses / total_games * 100
     draw_percentage = draws / total_games  * 100
     print("Total games played: ", total_games)
-    print(team_name_1, "previous record against", team_name_2,)
+    print(team_name_1, "| previous record against |", team_name_2,)
     print("win rate: ", win_percentage,"%")
     print("loss rate: ", loss_percentage,"%")
     print("draw rate: ", draw_percentage,"%")
