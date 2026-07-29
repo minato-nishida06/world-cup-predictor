@@ -44,9 +44,9 @@ def home():
         elif total_games == 0:
             return "<style>body {font-family: Arial; text-align: center; margin-top: 50px;}</style> These teams have never played each other in the past <br> <a href='/'>Predict Again</a>"
         else:
-            win_percentage = wins / total_games * 100
-            loss_percentage = losses / total_games * 100
-            draw_percentage = draws / total_games * 100
+            win_percentage = round(wins / total_games * 100, 1)
+            loss_percentage = round(losses / total_games * 100, 1)
+            draw_percentage = round(draws / total_games * 100, 1)
             return f"<style>body {{font-family: Arial; text-align: center; margin-top: 50px;}}</style><h1>World Cup Match Predictor</h1> <br> Total games played: {total_games} <br> {team_name_1}'s previous record against {team_name_2} <br> win rate: {win_percentage} % <br> loss rate: {loss_percentage} % <br> draw rate: {draw_percentage} % <br> <a href='/'>Predict Again</a>"
         cur.close()
         conn.close()
